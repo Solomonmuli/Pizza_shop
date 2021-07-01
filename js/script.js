@@ -41,4 +41,16 @@ closeBtn.forEach(item => {
     document.querySelector(".pop-ot").classList.remove("flx");
   })
 })
+//pizza topping price function
+let topPrice = () => {
+  let toppingPrice = 0;
+  if (document.querySelector("#flexRadioDefault1").checked) {
+    toppingPrice = 200;
+  } else if (document.querySelector('#flexRadioDefault2').checked) {
+    toppingPrice = 300;
+  } else if (document.querySelector('#flexRadioDefault3').checked) {
+    toppingPrice = 400;
+  }
+  return toppingPrice;
+}
 
