@@ -24,7 +24,7 @@ body{
 }
 .pizza-img {
   background-color: #1d1d1d;
-  border-radius: 10px;
+  border-radius: 10px 10px;
   box-shadow: 0 0 10px #414141;
   transition: .5s;
 }
@@ -38,12 +38,12 @@ body{
 .pop-cart {
   display: none;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.493);
+  background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 3;
 }
 .pizza-img:hover {
   background-color:#FFC75F;
@@ -58,6 +58,7 @@ body{
 input {
   width: 18%;
 }
-.foot-lst{
-  padding: 10px;
+.foot-lst li{
+list-style: none;
+padding: 3px 10px
 }
