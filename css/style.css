@@ -28,6 +28,23 @@ body{
   box-shadow: 0 0 10px #414141;
   transition: .5s;
 }
+.pop-fig img {
+  width: 40%;
+}
+.pop-fig i {
+  right: 10px;
+  top: 10px;
+}
+.pop-cart {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.493);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
 .pizza-img:hover {
   background-color:#FFC75F;
   transition: .1s ease;
@@ -37,4 +54,10 @@ body{
 }
 .menu{
   color: #0FCAF0;
+}
+input {
+  width: 18%;
+}
+.foot-lst{
+  padding: 10px;
 }
