@@ -53,4 +53,16 @@ let topPrice = () => {
   }
   return toppingPrice;
 }
+//pries if pizza according to sizes function
+let sizePrice = () => {
+  let sizePr = 0;
+  if (document.querySelector("#size1").checked) {
+    sizePr = 500;
+  } else if (document.querySelector("#size2").checked) {
+    sizePr = 800;
+  } else if (document.querySelector("#size3").checked) {
+    sizePr = 1200;
+  }
+  return sizePr;
+}
 
