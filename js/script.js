@@ -53,7 +53,7 @@ let topPrice = () => {
   }
   return toppingPrice;
 }
-//pries if pizza according to sizes function
+//prices of pizza according to sizes function
 let sizePrice = () => {
   let sizePr = 0;
   if (document.querySelector("#size1").checked) {
@@ -66,3 +66,15 @@ let sizePrice = () => {
   return sizePr;
 }
 
+//payment data
+class Menu {
+  constructor(sizePrice, toppingPrice, quantity, delivery) {
+    this.sizePrice = sizePrice;
+    this.toppingPrice = toppingPrice;
+    this.quantity = quantity;
+    this.delivery = delivery;
+  }
+  get totalPrice() {
+    return ((this.sizePrice + this.toppingPrice) * this.quantity) + this.delivery;
+  }
+}
