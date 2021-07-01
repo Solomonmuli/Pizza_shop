@@ -45,11 +45,11 @@ closeBtn.forEach(item => {
 let topPrice = () => {
   let toppingPrice = 0;
   if (document.querySelector("#flexRadioDefault1").checked) {
-    toppingPrice = 200;
+    toppingPrice = 150;
   } else if (document.querySelector('#flexRadioDefault2').checked) {
-    toppingPrice = 300;
+    toppingPrice = 250;
   } else if (document.querySelector('#flexRadioDefault3').checked) {
-    toppingPrice = 400;
+    toppingPrice = 350;
   }
   return toppingPrice;
 }
@@ -57,11 +57,11 @@ let topPrice = () => {
 let sizePrice = () => {
   let sizePr = 0;
   if (document.querySelector("#size1").checked) {
-    sizePr = 500;
+    sizePr = 400;
   } else if (document.querySelector("#size2").checked) {
-    sizePr = 800;
+    sizePr = 700;
   } else if (document.querySelector("#size3").checked) {
-    sizePr = 1200;
+    sizePr = 1000;
   }
   return sizePr;
 }
@@ -78,3 +78,26 @@ class Menu {
     return ((this.sizePrice + this.toppingPrice) * this.quantity) + this.delivery;
   }
 }
+
+// add to cart 
+document.querySelector(".addCat").addEventListener('click', e => {
+  document.querySelector(".pop-ot").classList.add("flx");
+  let quantity = parseInt(document.querySelector(".quantity").value);
+
+  let toppingPrice = topPrice();
+  let size = sizePrice();
+  let delivery = 200;
+  let calcPay = new Menu(size, toppingPrice, quantity, delivery);
+  totalPayment.innerText = calcPay.totalPrice;
+  cartList.classList.remove('flx');
+
+})
+///pay button
+document.querySelector(".pay").addEventListener('click', () => {
+  let name = document.querySelector("#name").value;
+  let location = document.querySelector('#location').value;
+  let price = totalPayment.innerText;
+  alert(`Hi ${name} your order will be delivered to ${location} in the next 45 minutes`)
+  document.querySelector(".pop-ot").classList.remove("flx");
+
+})
