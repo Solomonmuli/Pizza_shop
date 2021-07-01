@@ -14,10 +14,18 @@ menuList.forEach(item => {
     let order = target.classList.contains("order");
     if (order) {
       cartList.classList.add("flx");
-
-
     }
 
   });
 })
 
+ //Place order button function
+ document.querySelectorAll(".order").forEach(item => {
+  item.addEventListener('click', (e) => {
+    let target = e.target;
+    let shop = target.parentElement.parentElement;
+    document.querySelector('.pop-fig h3').innerHTML = shop.querySelector('h3').innerHTML;
+    document.querySelector('.pop-fig img').src = shop.querySelector(".d-block").src;
+
+  })
+})
