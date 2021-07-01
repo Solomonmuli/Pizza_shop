@@ -29,3 +29,16 @@ menuList.forEach(item => {
 
   })
 })
+//close buttons options
+closeBtn.forEach(item => {
+
+  item.addEventListener('click', e => {
+    let target = e.target
+    let parent = target.parentElement.parentElement;
+    if (parent.classList.contains("pop-op"))
+      cartList.classList.remove('flx');
+    else(parent.classList.contains("pop-ot"))
+    document.querySelector(".pop-ot").classList.remove("flx");
+  })
+})
+
