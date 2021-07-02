@@ -26,7 +26,7 @@ menuList.forEach(item => {
     let shop = target.parentElement.parentElement;
     document.querySelector('.pop-fig h3').innerHTML = shop.querySelector('h3').innerHTML;
     document.querySelector('.pop-fig img').src = shop.querySelector(".d-block").src;
-
+    
   })
 })
 //close buttons options
