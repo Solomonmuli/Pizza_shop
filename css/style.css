@@ -22,7 +22,7 @@ body{
   width: 100%;
 }
 .pizza-img div {
-  bottom: 5px;
+  bottom: 7px;
   width: 100%;
 }
 .pizza-img {
@@ -56,6 +56,12 @@ body{
 .visit{
   color: #0FCAF0;
 }
+#visit{
+  background-color: #1d1d1d;
+  border-radius: 10px 10px;
+  box-shadow: 0 0 10px #414141;
+  transition: .5s;
+}
 .menu{
   color: #0FCAF0;
 }
@@ -66,4 +72,11 @@ input {
 list-style: none;
 padding: 3px 10px
 }
+footer{
+  background-color: #df4759;
+}
 
+#delivery img{
+  width: 100%;
+  padding-top:30px ;
+}
