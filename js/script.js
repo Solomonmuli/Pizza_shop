@@ -80,7 +80,7 @@ class Menu {
 }
 
 // add to cart 
-document.querySelector(".addCat").addEventListener('click', e => {
+document.querySelector(".addCart").addEventListener('click', e => {
   document.querySelector(".pop-ot").classList.add("flx");
   let quantity = parseInt(document.querySelector(".quantity").value);
 
